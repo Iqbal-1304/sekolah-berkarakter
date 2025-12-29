@@ -2,7 +2,7 @@ import Link from "next/link";
 
 /* ambil berita dari backend */
 async function getBerita() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/news`, {
+  const res = await fetch(`/api/news`, {
     cache: "no-store",
   });
 
