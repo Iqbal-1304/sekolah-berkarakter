@@ -1,9 +1,8 @@
-"use client";
 import Link from "next/link";
 
 /* ambil berita dari backend */
 async function getBerita() {
-  const res = await fetch(`/api/news`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/news`, {
     cache: "no-store",
   });
 
@@ -12,11 +11,11 @@ async function getBerita() {
   return res.json();
 }
 
-//export const metadata = {
-//  title: "Sekolah Berkarakter | Kota Semarang",
-//  description:
-//    "Program Pemerintah Kota Semarang dalam membentuk karakter peserta didik",
-// };
+export const metadata = {
+  title: "Sekolah Berkarakter | Kota Semarang",
+  description:
+    "Program Pemerintah Kota Semarang dalam membentuk karakter peserta didik",
+};
 
 export default async function HomePage() {
   const berita = await getBerita();
