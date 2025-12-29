@@ -12,11 +12,11 @@ async function getBerita() {
   return res.json();
 }
 
-export const metadata = {
-  title: "Sekolah Berkarakter | Kota Semarang",
-  description:
-    "Program Pemerintah Kota Semarang dalam membentuk karakter peserta didik",
-};
+//export const metadata = {
+//  title: "Sekolah Berkarakter | Kota Semarang",
+//  description:
+//    "Program Pemerintah Kota Semarang dalam membentuk karakter peserta didik",
+// };
 
 export default async function HomePage() {
   const berita = await getBerita();
